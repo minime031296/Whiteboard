@@ -1,0 +1,32 @@
+.absolute {
+  position: absolute;
+}
+.bg-black {
+  background-color: black;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-gray {
+  background-color: gray;
+}
+.text-white {
+  color: white;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
