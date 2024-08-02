@@ -10,9 +10,9 @@ const nextApp = next({ dev });
 const nextHandler = nextApp.getRequestHandler();
 
 const app = express();
-const server = createServer(app); // Create the server
+const server = createServer(app); 
 
-const io = new Server<ClientToServerEvents, ServerToClientEvents>(server); // Initialize socket.io with types
+const io = new Server<ClientToServerEvents, ServerToClientEvents>(server);
 
 app.get("/room", async (_, res) => {
   res.render('_room.tsx')
@@ -32,10 +32,10 @@ io.on("connection", (socket) => {
 });
 
 nextApp.prepare().then(() => {
-  // Handle all requests with Next.js
+
   app.all("*", (req, res) => nextHandler(req, res));
 
-  // Start the server
+
   server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
   });

@@ -8,7 +8,7 @@ const InsertImage = ({ ctxRef, size }) => {
         const img = new Image();
         img.onload = () => {
           if (ctxRef.current) {
-            ctxRef.current.clearRect(0, 0, size.width, size.height); // Clear the canvas
+            ctxRef.current.clearRect(0, 0, size.width, size.height); 
             ctxRef.current.drawImage(img, 0, 0, size.width, size.height);
           }
         };
@@ -27,13 +27,13 @@ const InsertImage = ({ ctxRef, size }) => {
         let width = image.width;
         let height = image.height;
 
-        // If the image dimensions are already within the bounds, no resizing is needed
+       
         if (width <= maxWidth && height <= maxHeight) {
           canvas.toBlob(resolve, file.type);
           return;
         }
 
-        // Calculate new dimensions while maintaining aspect ratio
+       
         let newWidth;
         let newHeight;
 
@@ -45,7 +45,7 @@ const InsertImage = ({ ctxRef, size }) => {
           newWidth = width * (maxHeight / height);
         }
 
-        // Create a canvas to resize the image
+ 
         const canvas = document.createElement('canvas');
         canvas.width = newWidth;
         canvas.height = newHeight;
